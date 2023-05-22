@@ -10,7 +10,9 @@ class AppHeader extends HTMLElement {
           <button id="hamburgerButton">☰</button>
         </div>
         <div class="app-bar__brand">
-          <h1>YR</h1>
+          <h1>
+            <a href="#/" class="logo">YR</a>
+          </h1>
           <div id="search-form">
               <a for="search-bar" href="#/search" id="search-btn">
                 <svg
@@ -35,9 +37,7 @@ class AppHeader extends HTMLElement {
         </div>
         <nav id="navigationDrawer" class="app-bar__navigation">
           <ul>
-            <li>
-              
-            </li>
+            <li><a href="https://github.com/nabilfikrisp">About Us</a></li>
             <li><a href="#/list">Trending</a></li>
             <li><a href="#/favorite">Your Favorite</a></li>
           </ul>
