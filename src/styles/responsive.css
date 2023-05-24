@@ -21,6 +21,11 @@
     width: 100%;
   }
 
+  .app-bar .app-bar__navigation ul {
+    flex-direction: column;
+    list-style: none;
+  }
+
   .app-bar .app-bar__navigation ul li {
     display: inline-block;
   }
@@ -54,6 +59,10 @@
 @media screen and (min-width: 800px) {
   .app-bar .app-bar__brand h1 {
     font-size: 2em;
+  }
+  .app-bar .app-bar__navigation ul {
+    flex-direction: row;
+    list-style: none;
   }
 }
 

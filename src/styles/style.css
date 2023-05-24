@@ -102,10 +102,11 @@ input, a, button {
 
 .app-bar .app-bar__navigation ul {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  list-style-type: none;
 }
-
 .app-bar .app-bar__navigation ul li a {
   display: inline-block;
   text-decoration: none;
@@ -675,7 +676,7 @@ app-main {
   position: absolute;
   top: -40px;
   left: 0;
-  background-color: var(--purple-100);
+  background-color: var(--purple-200);
   color: white;
   padding: 8px;
   z-index: 100;
@@ -701,6 +702,9 @@ app-footer p {
 app-footer p a {
   color: var(--text);
   text-decoration: none;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  display: inline-block;
 }
 
 .loading {
