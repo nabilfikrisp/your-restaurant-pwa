@@ -22,7 +22,7 @@
   }
 
   .app-bar .app-bar__navigation ul {
-    flex-direction: column;
+    flex-direction: row;
     list-style: none;
   }
 
