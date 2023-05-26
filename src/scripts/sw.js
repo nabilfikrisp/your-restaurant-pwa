@@ -8,6 +8,7 @@ const assetsToCache = [
   './icons/favicon-32x32.png',
   './icons/favicon-192x192.png',
   './icons/favicon-512x512.png',
+  './hero-image_1.jpg',
   './index.html',
   './app.bundle.js',
   './app.webmanifest',

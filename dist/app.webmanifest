@@ -31,6 +31,12 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "/hero-image_1.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg",
+      "purpose": "any"
     }
   ]
 }

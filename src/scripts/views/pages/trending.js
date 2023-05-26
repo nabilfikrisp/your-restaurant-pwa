@@ -5,6 +5,7 @@ const Trending = {
   async render() {
     return `
     <div class="content">
+      <div id="hero"></div>
       <h2 class="content__heading">Now Trending in Town</h2>
       <div id="restaurants" class="restaurants">
       </div>

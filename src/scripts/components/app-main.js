@@ -6,7 +6,6 @@ class AppMain extends HTMLElement {
 
   render() {
     this.innerHTML = `
-    
     `;
   }
 }
