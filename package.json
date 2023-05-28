@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack serve --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
+    "build": "webpack --config webpack.prod.js && npm run build-image",
     "serve": "http-server dist --port 7000",
     "test": "karma start",
     "e2e": "codeceptjs run --steps",
