@@ -1,29 +1,30 @@
-import 'regenerator-runtime';
-import CacheHelper from './utils/cache-helper';
+import { precacheAndRoute } from 'workbox-precaching';
+import { NetworkFirst } from 'workbox-strategies';
+import { registerRoute } from 'workbox-routing';
+import { ExpirationPlugin } from 'workbox-expiration';
 
-const assetsToCache = [
-  './',
-  './icons/favicon.ico',
-  './icons/favicon-16x16.png',
-  './icons/favicon-32x32.png',
-  './icons/favicon-192x192.png',
-  './icons/favicon-512x512.png',
-  './hero-image_1.jpg',
-  './index.html',
-  './app.bundle.js',
-  './app.webmanifest',
-  './sw.bundle.js',
-];
+// Do precaching
+precacheAndRoute(self.__WB_MANIFEST);
 
-/* eslint-disable no-unused-vars */
-self.addEventListener('install', (event) => {
-  event.waitUntil(CacheHelper.cachingAppShell([...assetsToCache]));
+// https://www.dicoding.com/academies/219/discussions/255835
+registerRoute(
+  // eslint-disable-next-line prefer-regex-literals
+  new RegExp('^https://restaurant-api.dicoding.dev'),
+  new NetworkFirst({
+    cacheName: 'dicoding-restaurant-api',
+    plugins: [
+      new ExpirationPlugin({
+        maxAgeSeconds: 30 * 24 * 60 * 60,
+      }),
+    ],
+  }),
+);
+
+self.addEventListener('install', () => {
+  console.log('Service Worker: Installed');
+  self.skipWaiting();
 });
 
-self.addEventListener('activate', (event) => {
-  event.waitUntil(CacheHelper.deleteOldCache());
-});
-
-self.addEventListener('fetch', (event) => {
-  event.respondWith(CacheHelper.revalidateCache(event.request));
+self.addEventListener('push', () => {
+  console.log('Service Worker: Pushed');
 });
