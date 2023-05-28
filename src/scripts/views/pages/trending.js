@@ -7,10 +7,10 @@ const Trending = {
     <div class="content">
       <div id="hero">
         <picture>
-          <source media="(max-width: 400px)" srcset="./images/hero-image_1-xs.jpg">
-          <source media="(max-width: 600px)" srcset="./images/hero-image_1-small.jpg">
-          <source media="(max-width: 800px)" srcset="./images/hero-image_1-medium.jpg">
-          <img src='./images/hero-image_1-large.jpg' alt="hero">
+          <source media="(max-width: 420px)" srcset="./images/hero_1-xs.jpeg">
+          <source media="(max-width: 600px)" srcset="./images/hero_1-small.jpeg">
+          <source media="(max-width: 800px)" srcset="./images/hero_1-medium.jpeg">
+          <img src='./images/hero_1-large.jpeg' alt="hero">
         </picture>
       </div>
       <h2 class="content__heading">Now Trending in Town</h2>
