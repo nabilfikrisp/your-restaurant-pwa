@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "serve": "http-server dist --port 7000"
+    "serve": "http-server dist --port 7000",
+    "test": "karma start"
   },
   "keywords": [],
   "author": "",
@@ -23,15 +24,26 @@
     "eslint-plugin-import": "^2.27.5",
     "html-webpack-plugin": "^5.5.1",
     "http-server": "^14.1.1",
+    "jasmine-ajax": "4.0.0",
+    "jasmine-core": "4.2.0",
+    "karma": "5.2.3",
+    "karma-chrome-launcher": "3.1.1",
+    "karma-eslint": "2.2.0",
+    "karma-firefox-launcher": "2.1.2",
+    "karma-jasmine": "4.0.2",
+    "karma-sourcemap-loader": "0.3.8",
+    "karma-webpack": "5.0.0",
     "style-loader": "^3.3.2",
     "webpack": "^5.83.1",
     "webpack-cli": "^5.1.1",
     "webpack-dev-server": "^4.15.0",
     "webpack-merge": "^5.8.0",
+    "whatwg-fetch": "3.6.2",
     "workbox-webpack-plugin": "^6.6.0"
   },
   "dependencies": {
     "idb": "^7.1.1",
+    "jasmine": "^5.0.0",
     "regenerator-runtime": "^0.13.11",
     "workbox-window": "^6.6.0"
   }
