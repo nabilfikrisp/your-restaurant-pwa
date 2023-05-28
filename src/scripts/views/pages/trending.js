@@ -5,7 +5,14 @@ const Trending = {
   async render() {
     return `
     <div class="content">
-      <div id="hero"></div>
+      <div id="hero">
+        <picture>
+          <source media="(max-width: 400px)" srcset="./images/hero-image_1-xs.jpg">
+          <source media="(max-width: 600px)" srcset="./images/hero-image_1-small.jpg">
+          <source media="(max-width: 800px)" srcset="./images/hero-image_1-medium.jpg">
+          <img src='./images/hero-image_1-large.jpg' alt="hero">
+        </picture>
+      </div>
       <h2 class="content__heading">Now Trending in Town</h2>
       <div id="restaurants" class="restaurants">
       </div>
