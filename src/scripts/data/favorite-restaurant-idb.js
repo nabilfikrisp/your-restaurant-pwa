@@ -19,7 +19,7 @@ const FavoriteRestaurantIdb = {
   async putRestaurant(restaurant) {
     if (!Object.prototype.hasOwnProperty.call(restaurant, 'id')) {
       console.error('Restaurant does not have the required "id" property');
-      return (await dbPromise).getAll(OBJECT_STORE_NAME); // Skip storing the restaurant
+      return null; // Skip storing the restaurant
     }
 
     return (await dbPromise).put(OBJECT_STORE_NAME, restaurant);
