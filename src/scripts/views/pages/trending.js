@@ -7,9 +7,9 @@ const Trending = {
     <div class="content">
 
         <picture>
+          <source media="(max-width: 600px)" srcset="./images/hero_1-small.jpeg" id="hero">
           <source media="(max-width: 800px)" srcset="./images/hero_1-medium.jpeg" id="hero">
-          <source media="(max-width: 1200px)" srcset="./images/hero_1-large.jpeg" id="hero">
-          <img src='./images/hero_1-medum.jpeg' alt="hero" id="hero">
+          <img src='./images/hero_1-large.jpeg' alt="hero" id="hero">
         </picture>
 
       <h2 class="content__heading">Now Trending in Town</h2>
