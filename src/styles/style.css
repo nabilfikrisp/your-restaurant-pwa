@@ -374,6 +374,7 @@ picture {
   cursor: pointer;
   text-decoration: none;
   color: var(--text);
+  border: 2px solid var(--text);
 }
 
 .restaurant-card:hover {

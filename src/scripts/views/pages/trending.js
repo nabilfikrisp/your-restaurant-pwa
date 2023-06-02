@@ -7,11 +7,9 @@ const Trending = {
     <div class="content">
 
         <picture>
-          <source media="(max-width: 420px)" srcset="./images/hero_1-xs.jpeg" id="hero">
-          <source media="(max-width: 600px)" srcset="./images/hero_1-small.jpeg" id="hero">
           <source media="(max-width: 800px)" srcset="./images/hero_1-medium.jpeg" id="hero">
           <source media="(min-width: 800px)" srcset="./images/hero_1-large.jpeg" id="hero">
-          <img src='./images/hero_1-xs.jpeg' alt="hero" id="hero">
+          <img src='./images/hero_1-medum.jpeg' alt="hero" id="hero">
         </picture>
 
       <h2 class="content__heading">Now Trending in Town</h2>
@@ -44,6 +42,7 @@ const Trending = {
 
   renderSkeletonPlaceholders(count) {
     let placeholders = '';
+    // eslint-disable-next-line no-plusplus
     for (let i = 0; i < count; i++) {
       placeholders += `
         <div class="restaurant-card skeleton">
