@@ -6,11 +6,7 @@ const Trending = {
     return `
     <div class="content">
 
-        <picture>
-          <source media="(max-width: 600px)" srcset="./images/hero_1-small.jpeg" id="hero">
-          <source media="(max-width: 800px)" srcset="./images/hero_1-medium.jpeg" id="hero">
-          <img src='./images/hero_1-large.jpeg' alt="hero" id="hero">
-        </picture>
+        <img id="hero" src="./images/hero_1-large.jpeg" srcset="./images/hero_1-small.jpeg 600w, ./images/hero_1-medium.jpeg 800w" sizes="100vw" alt="hero" preload>
 
       <h2 class="content__heading">Now Trending in Town</h2>
       <div id="restaurants" class="restaurants">
@@ -50,8 +46,8 @@ const Trending = {
           <div class="restaurant-card__content">
             <h3 class="restaurant-card__name">Restaurant Name</h3>
             <p class="restaurant-card__description">  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam deserunt repudiandae autem, excepturi mollitia culpa vel illum soluta expedita perferendis totam ipsum, repellat laboriosam, corporis aspernatur aliquam? Nisi nobis unde neque, voluptas laboriosam, sunt nesciunt, ut cupiditate debitis enim porro optio odit ad. Aperiam modi vitae repellat culpa, cupiditate asperiores harum. Est molestiae nisi hic explicabo autem reiciendis et corrupti aut voluptatibus laboriosam exercitationem voluptate voluptatum quod, officia asperiores minus rerum facere expedita nulla nihil accusantium tempore vitae! Impedit architecto repellat illum culpa animi corrupti accusantium incidunt nihil ab inventore porro ipsam, molestiae assumenda quasi sed odio laborum laboriosam exercitationem?</p>
-            <p class="restaurant-card__city">City: ...</p>
-            <p class="restaurant-card__rating">5</p>
+            <p class="restaurant-card__city">City: Somewhere</p>
+            <p class="restaurant-card__rating">Rating: 5</p>
           </div>
         </div>
       `;
