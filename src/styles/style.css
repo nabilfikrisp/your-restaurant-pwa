@@ -353,13 +353,25 @@ app-main {
   height: 400px;
 }
 
+.hero-skeleton {
+  background-color: #f0f0f0;
+  animation: skeleton-loading 1s infinite ease-in-out alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .restaurant-card__image-skeleton {
   width: full;
   height: 200px;
   background-color: #d2daff;
 }
-
-
 
 .restaurant-card {
   background-color: #fff;
