@@ -49,7 +49,7 @@ const Trending = {
           <div class="restaurant-card__image-skeleton"></div>
           <div class="restaurant-card__content">
             <h3 class="restaurant-card__name">Restaurant Name</h3>
-            <p class="restaurant-card__description">lorem ipsum lorem ipsum lorem ipsum</p>
+            <p class="restaurant-card__description">  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam deserunt repudiandae autem, excepturi mollitia culpa vel illum soluta expedita perferendis totam ipsum, repellat laboriosam, corporis aspernatur aliquam? Nisi nobis unde neque, voluptas laboriosam, sunt nesciunt, ut cupiditate debitis enim porro optio odit ad. Aperiam modi vitae repellat culpa, cupiditate asperiores harum. Est molestiae nisi hic explicabo autem reiciendis et corrupti aut voluptatibus laboriosam exercitationem voluptate voluptatum quod, officia asperiores minus rerum facere expedita nulla nihil accusantium tempore vitae! Impedit architecto repellat illum culpa animi corrupti accusantium incidunt nihil ab inventore porro ipsam, molestiae assumenda quasi sed odio laborum laboriosam exercitationem?</p>
             <p class="restaurant-card__city">City: ...</p>
             <p class="restaurant-card__rating">5</p>
           </div>
