@@ -92,27 +92,6 @@ const createRestaurantItemTemplate = (restaurant) => `
   </a>
 `;
 
-const createSkeletonTemplate = (count) => {
-  let skeletonTemplate = '';
-
-  // eslint-disable-next-line no-plusplus
-  for (let i = 0; i < count; i++) {
-    skeletonTemplate += `
-    <div class="restaurant-card>
-      <img height="200px" class="restaurant-card__image lazyload">
-      <div class="restaurant-card__content">
-        <h3 class="restaurant-card__name">...</h3>
-        <p class="restaurant-card__description">...</p>
-        <p class="restaurant-card__city">City: ...</p>
-        <p class="restaurant-card__rating">Rating: ...</p>
-      </div>
-    </div>
-    `;
-  }
-
-  return skeletonTemplate;
-};
-
 const createLikeButtonTemplate = () => `
   <button aria-label="like this restaurant" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
@@ -132,5 +111,5 @@ const createLoadingIcon = () => `<div class="loading-icon"><svg xmlns="http://ww
 
 export {
   createRestaurantDetailTemplate, createRestaurantItemTemplate, createLikeButtonTemplate,
-  createLikedButtonTemplate, createLoadingIcon, createSkeletonTemplate,
+  createLikedButtonTemplate, createLoadingIcon,
 };

@@ -1,19 +1,22 @@
 import RestaurantSource from '../../data/restaurant-source';
-import { createRestaurantItemTemplate, createSkeletonTemplate } from '../templates/template-creator';
+import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Trending = {
   async render() {
     return `
     <div class="content">
-      <picture>
-        <source media="(max-width: 420px)" srcset="./images/hero_1-xs.jpeg" id="hero">
-        <source media="(max-width: 600px)" srcset="./images/hero_1-small.jpeg" id="hero">
-        <source media="(max-width: 800px)" srcset="./images/hero_1-medium.jpeg" id="hero">
-        <img src='./images/hero_1-large.jpeg' alt="hero" id="hero">
-      </picture>
+
+        <picture>
+          <source media="(max-width: 420px)" srcset="./images/hero_1-xs.jpeg" id="hero">
+          <source media="(max-width: 600px)" srcset="./images/hero_1-small.jpeg" id="hero">
+          <source media="(max-width: 800px)" srcset="./images/hero_1-medium.jpeg" id="hero">
+          <source media="(min-width: 800px)" srcset="./images/hero_1-large.jpeg" id="hero">
+          <img src='./images/hero_1-xs.jpeg' alt="hero" id="hero">
+        </picture>
 
       <h2 class="content__heading">Now Trending in Town</h2>
       <div id="restaurants" class="restaurants">
+        ${this.renderSkeletonPlaceholders(8)}
       </div>
       <div id="error" class="error">
         <p>Failed to fetch trending restaurants. Please try again later.</p>
@@ -28,20 +31,32 @@ const Trending = {
 
     try {
       const restaurants = await RestaurantSource.trendingRestaurants();
-      if (restaurants.length > 0) {
-        restaurantsContainer.innerHTML = '';
-        restaurants.forEach((restaurant) => {
-          const restaurantItem = createRestaurantItemTemplate(restaurant);
-          restaurantsContainer.innerHTML += restaurantItem;
-        });
-      } else {
-        restaurantsContainer.innerHTML = createSkeletonTemplate(4); // Show 4 skeleton cards
-      }
-      errorContainer.style.display = 'none';
+      restaurantsContainer.innerHTML = '';
+      restaurants.forEach((restaurant) => {
+        restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+      });
     } catch (error) {
       restaurantsContainer.innerHTML = '';
       errorContainer.style.display = 'block';
     }
+  },
+
+  renderSkeletonPlaceholders(count) {
+    let placeholders = '';
+    for (let i = 0; i < count; i++) {
+      placeholders += `
+        <div class="restaurant-card skeleton">
+          <div class="restaurant-card__image-skeleton"></div>
+          <div class="restaurant-card__content">
+            <h3 class="restaurant-card__name-skeleton"></h3>
+            <p class="restaurant-card__description-skeleton"></p>
+            <p class="restaurant-card__city-skeleton"></p>
+            <p class="restaurant-card__rating-skeleton"></p>
+          </div>
+        </div>
+      `;
+    }
+    return placeholders;
   },
 };
 
