@@ -45,13 +45,13 @@ const Trending = {
     let placeholders = '';
     for (let i = 0; i < count; i++) {
       placeholders += `
-        <div class="restaurant-card skeleton">
-          <div class="restaurant-card__image-skeleton"></div>
+        <div class="restaurant-card">
+          <div class="restaurant-card__image"></div>
           <div class="restaurant-card__content">
-            <h3 class="restaurant-card__name-skeleton"></h3>
-            <p class="restaurant-card__description-skeleton"></p>
-            <p class="restaurant-card__city-skeleton"></p>
-            <p class="restaurant-card__rating-skeleton"></p>
+            <h3 class="restaurant-card__name">...</h3>
+            <p class="restaurant-card__description">...</p>
+            <p class="restaurant-card__city">...</p>
+            <p class="restaurant-card__rating">...</p>
           </div>
         </div>
       `;
