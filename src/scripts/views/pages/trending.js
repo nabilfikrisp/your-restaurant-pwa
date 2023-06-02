@@ -8,7 +8,7 @@ const Trending = {
 
         <picture>
           <source media="(max-width: 800px)" srcset="./images/hero_1-medium.jpeg" id="hero">
-          <source media="(min-width: 800px)" srcset="./images/hero_1-large.jpeg" id="hero">
+          <source media="(max-width: 1200px)" srcset="./images/hero_1-large.jpeg" id="hero">
           <img src='./images/hero_1-medum.jpeg' alt="hero" id="hero">
         </picture>
 
