@@ -35,6 +35,7 @@ const Trending = {
       restaurants.forEach((restaurant) => {
         restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
       });
+      errorContainer.style.display = 'none';
     } catch (error) {
       restaurantsContainer.innerHTML = '';
       errorContainer.style.display = 'block';
@@ -48,10 +49,10 @@ const Trending = {
         <div class="restaurant-card skeleton">
           <div class="restaurant-card__image-skeleton"></div>
           <div class="restaurant-card__content">
-            <h3 class="restaurant-card__name-skeleton"></h3>
-            <p class="restaurant-card__description-skeleton"></p>
-            <p class="restaurant-card__city-skeleton"></p>
-            <p class="restaurant-card__rating-skeleton"></p>
+            <h3 class="restaurant-card__name">Restaurant Name</h3>
+            <p class="restaurant-card__description">lorem ipsum lorem ipsum lorem ipsum</p>
+            <p class="restaurant-card__city">City: ...</p>
+            <p class="restaurant-card__rating">5</p>
           </div>
         </div>
       `;
