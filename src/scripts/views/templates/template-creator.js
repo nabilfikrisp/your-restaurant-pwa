@@ -82,7 +82,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
 
 const createRestaurantItemTemplate = (restaurant) => `
   <a class="restaurant-card" href="#/detail/${restaurant.id}">
-    <img class="restaurant-card__image lazyload" src="./images/hero-image_1-xs.jpg" data-src="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" alt="${restaurant.name}">
+    <img class="restaurant-card__image lazyload" data-src="${CONFIG.BASE_IMAGE_URL_SMALL + restaurant.pictureId}" alt="${restaurant.name}">
     <div class="restaurant-card__content">
       <h3 class="restaurant-card__name">${restaurant.name}</h3>
       <p class="restaurant-card__description">${restaurant.description}</p>
