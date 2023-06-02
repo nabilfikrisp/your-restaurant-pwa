@@ -250,20 +250,7 @@ picture {
 }
 
 #herodasdasda {
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
   width: 100%;
-  height: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-image: url("../public/hero-image_1.jpg");
-  background-size: cover;
-  background-position: top; */
-  margin-bottom: 16px;
-  border-radius: 16px;
-  background-color: #eef1ff;
 }
 
 .content {

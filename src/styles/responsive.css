@@ -80,10 +80,6 @@
   .restaurants {
     grid-template-columns: repeat(4, 1fr);
   }
-  #heroasdadasdas {
-    min-width: 1000px;
-    width: 1000px;
-  }
 
   picture {
     width: 1000px;
