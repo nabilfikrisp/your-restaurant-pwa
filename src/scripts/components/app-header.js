@@ -13,7 +13,12 @@ class AppHeader extends HTMLElement {
           <h1>
             <a href="#/" class="logo">YR</a>
           </h1>
-          <div id="search-form">
+          
+        </div>
+        <nav id="navigationDrawer" class="app-bar__navigation">
+          <ul>
+          <li>
+              <div id="search-form">
               <a for="search-bar" href="#/search" id="search-btn">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -33,10 +38,8 @@ class AppHeader extends HTMLElement {
                 </svg>
               </a>
               <input type="text" id="search-bar" placeholder="Search..." name="query" />
-          </div>
-        </div>
-        <nav id="navigationDrawer" class="app-bar__navigation">
-          <ul>
+              </div>
+            </li>
             <li><a href="https://github.com/nabilfikrisp">About Us</a></li>
             <li><a href="#/list">Trending</a></li>
             <li><a href="#/favorite">Your Favorite</a></li>
